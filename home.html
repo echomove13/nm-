@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Rainbow Valley Primary School</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+	<img src="rainbowvalley.png" alt="Rainbow over a Valley" style="width:250px;height:100px;">
+</header>
+
+<nav>
+	<ul>
+		<li><a href="home.html">Home</a></li>
+		<li><a href="schoollife.html">School Life</a></li>
+		<li><a href="news.html">News & Events</a></li>
+		<li><a href="classes.html">Our Classes</a></li>
+		<li><a href="curriculum.html">Curriculum</a></li>
+		<li><a href="contact.html">Contact Us</a></li>
+	</ul>
+</nav>
+
+<div class="slideshow-container">
+
+	<div class="slide fade">
+		<img src="rainbow.jpg" alt="Slide 1">
+	</div>
+
+	<div class="slide fade">
+		<img src="valley.jpg" alt="Slide 2">
+	</div>
+
+	<div class="slide fade">
+		<img src="valley1.jpg" alt="Slide 3">
+	</div>
+
+	<div class="slide fade">
+		<img src="valley2.jpg" alt="Slide 4">
+	</div>
+
+	<div class="slide fade">
+		<img src="rainbow1.jpg" alt="Slide 5">
+	</div>
+
+	<div class="slide fade">
+		<img src="rainbow2.jpg" alt="Slide 6">
+	</div>
+
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<div class="dots-container">
+	<span class="dot" onclick="currentSlide(1)"></span>
+	<span class="dot" onclick="currentSlide(2)"></span>
+	<span class="dot" onclick="currentSlide(3)"></span>
+	<span class="dot" onclick="currentSlide(4)"></span>
+	<span class="dot" onclick="currentSlide(5)"></span>
+	<span class="dot" onclick="currentSlide(6)"></span>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+	showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+	showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+	let i;
+	let slides = document.getElementsByClassName("slide");
+	let dots = document.getElementsByClassName("dot");
+
+	if (n > slides.length) { slideIndex = 1 }
+	if (n < 1) { slideIndex = slides.length }
+
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";
+	}
+
+	for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(" active", "");
+	}
+
+	slides[slideIndex - 1].style.display = "block";
+	dots[slideIndex - 1].className += " active";
+}
+
+setInterval(function() {
+	plusSlides(1);
+}, 4000);
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+	const content = document.querySelector(".testimonials-content");
+	if (!content) return;
+
+	let scrollAmount = 0;
+
+	function autoScroll() {
+		const maxScroll = content.scrollHeight - content.clientHeight;
+
+	scrollAmount += 1;
+
+	if (scrollAmount > maxScroll) {
+		scrollAmount = 0; 
+	}
+
+	content.scrollTop = scrollAmount;
+	}
+
+	setInterval(autoScroll, 20);
+	});
+</script>
+
+<div class="container welcome-container">
+	
+	<h2>Welcome to Rainbow Valley</h2>
+		<p>Welcome to Rainbow Valley Primary School, a vibrant and nurturing community where children are encouraged to learn, explore, 
+		and shine. We believe that every child is unique, with their own talents, interests, and dreams. Our aim is to create an environment 
+		where each pupil feels supported, valued, and inspired to reach their full potential.<br><br> 
+		At Rainbow Valley, learning is an exciting journey. Our classrooms are filled with curiosity, creativity, and hands-on opportunities 
+		that help children develop a deep love of learning. Whether they are investigating scientific questions, expressing themselves through 
+		art, embracing new stories in literacy, or exploring the outdoors, pupils are encouraged to ask questions, take risks, and think independently. 
+		We want every child to feel confident in their abilities and proud of their achievements, no matter how big or small.<br><br>
+		We place a strong emphasis on kindness, respect, and responsibility. These values shape the way we learn, play, and interact every day. 
+		Our staff work hard to create a safe, welcoming atmosphere where children feel comfortable trying new things and building positive 
+		relationships with their peers. Through consistent support and encouragement, pupils learn how to handle challenges, celebrate differences, 
+		and become thoughtful members of our school community.<br><br> 
+		Our dedicated teachers and support staff are passionate about helping children succeed academically, socially, and emotionally. We work 
+		closely with families to ensure that every child receives the guidance and encouragement they need to flourish. Whether through personalised 
+		support, engaging lessons, or exciting extracurricular activities, we are committed to providing a rich and meaningful educational experience 
+		for all.<br><br> 
+		Rainbow Valley is more than a school — it is a community where children grow as learners, friends, and individuals. We are proud of our warm, 
+		inclusive atmosphere and our commitment to helping every child develop confidence, resilience, and a positive attitude towards learning. We 
+		look forward to welcoming you into our school family and sharing in the joy, discovery, and growth that happens here every day.</p>
+
+</div>
+
+<div class="two-box-section">
+	<div class="info-box">
+		<h2>School Values</h2>
+			<ul class="values-list">
+				<li>
+  					<span class="value-title" style="color:#e60000;"><b>Responsibility - </b></span> Responsibility means taking ownership 
+					of what we do and making sensible choices. At Rainbow Valley, children learn responsibility by looking after their 
+					belongings, completing tasks on time, and being ready to learn. Pupils help keep classrooms tidy, take turns with 
+					classroom jobs, and understand that their actions can help or affect others. We encourage children to think about 
+					consequences and make choices that show maturity and care.
+				</li>
+				<li>
+  					<span class="value-title" style="color:#e65c00;"><b>Respect - </b></span>Respect means valuing ourselves, each other, 
+					and the world around us. In school, we show respect by listening when others are speaking, using polite language, and 
+					celebrating differences. Children learn to look after school equipment, follow rules, and treat everyone fairly. We 
+					teach pupils to appreciate different opinions and cultures, helping them grow into thoughtful, considerate members of 
+					our community.
+				</li>
+				<li>
+  					<span class="value-title" style="color:#e6e600;"><b>Curiosity - </b></span>Curiosity is the desire to explore, ask 
+					questions, and discover new things. At Rainbow Valley, children are encouraged to be curious in every lesson - from 
+					investigating in science to wondering “why?” during stories. We create activities that spark imagination and encourage 
+					pupils to dive deeper into their learning. Curiosity helps children become independent thinkers who enjoy finding out
+					 how the world works.
+				</li>
+				<li>
+  					<span class="value-title" style="color:#2eb82e;"><b>Perseverance - </b></span>Perseverance means not giving up when 
+					things feel difficult. We teach pupils that mistakes are part of learning and that trying again helps us grow. In 
+					school, children practise perseverance by tackling challenges step by step, asking for help when they need it, and 
+					celebrating progress, not perfection. We encourage a positive attitude so every child feels confident to keep going, 
+					even when something is hard.
+				</li>
+				<li>
+  					<span class="value-title" style="color:#0066cc;"><b>Kindness - </b></span>Kindness means caring for others through our 
+					words and actions. At Rainbow Valley, pupils show kindness by including others in games, offering help if someone is 
+					upset, and being supportive in class. We celebrate small acts of kindness, like sharing, taking turns, and encouraging 
+					friends. By modelling kindness every day, our school becomes a safe, welcoming and happy environment for everyone.
+				</li>
+			</ul>
+</div>
+
+	<div class="info-box testimonials-box">
+		<h2>Testimonials</h2>
+		<div class="testimonials-content">
+		<p>“My daughter has grown so much in confidence since joining Rainbow Valley. The teachers are kind, patient, and truly care about every child. 
+		She comes home excited to tell us what she learned each day.”<br>
+		<b>- Mrs. Hughes</b></p>
+
+		<p>“We’ve been so impressed with the supportive atmosphere at Rainbow Valley. Our son has thrived academically and socially, and the staff always 
+		go above and beyond to help him succeed.”<br>
+  		<b>- Parent of a Year 4 pupil</b></p>
+		
+		<p>“Our twins have very different personalities, but both have felt equally happy and understood at Rainbow Valley. The teachers recognise 
+		their strengths and encourage them gently in the areas where they need help.”<br>
+		<b>- The Patel Family</b></p>
+
+		<p>“We chose Rainbow Valley because of its caring ethos, and it has exceeded our expectations. Our child has made wonderful friends and learned 
+		the importance of kindness, respect, and responsibility.”<br>
+		<b>- Anonymous Parent</b></p>
+
+		<p>“The school keeps us well informed and always listens to any concerns we have. We feel like real partners in our child’s learning. The 
+		support staff are amazing and go out of their way to help.”<br>
+		<b>- Mr. and Mrs. Bennet</b></p>
+
+		<p>“Rainbow Valley has created such a fun and stimulating learning environment. Our son especially loves the outdoor learning sessions and 
+		the exciting topics they explore.”<br>
+		<b>- Emily R., Parent of a Year 2 Pupil</b></p>
+
+		<p>“We moved to the area recently and were worried about switching schools, but Rainbow Valley welcomed our children with open arms. They 
+		settled in quicker than we ever expected. It feels like a real family community.”<br>
+		<b>- Anonymous</b></p>
+
+		<p>“Our daughter used to be very shy, but since joining Rainbow Valley she has blossomed. Her teachers make every lesson exciting and she 
+		now talks nonstop about what she’s learned. We couldn’t be happier with the progress she’s made.”<br>
+		<b>- Mrs Lawson</b></p>
+
+		<p>“As a parent, nothing is more important than knowing your child feels happy and secure at school. Rainbow Valley provides exactly that. 
+		The staff are approachable, caring, and always put the children first. We are so grateful for their support.”<br>
+		<b>- Anonymous Parent</b></p>
+
+		<p>“Since joining Rainbow Valley, my son has been encouraged every step of the way. The teachers understand him so well and always know how 
+		to help him feel confident.”<br>
+		<b>- Mrs Daniels</b></p>
+
+		<p>“The progress my daughter has made this year has been incredible. Not only has she improved in her reading, but she has become much more 
+		resilient too.”<br>
+		<b>- Anonymous Parent</b></p>
+
+		<p>“We have always felt that the staff genuinely care about the wellbeing and happiness of the children. Rainbow Valley is a wonderful school 
+		community.”<br>
+		<b>- Mr Collins</b></p>
+
+		<p>“I always feel informed and involved in my child’s learning. The school keeps us updated regularly and welcomes any questions we have.”<br>
+		<b>- The Ahmed Family</b></p>
+
+		<p>“My son struggled with confidence before joining Rainbow Valley, but the kindness and patience of the teachers has completely transformed 
+		his attitude towards school.”<br>
+		<b>- Anonymous</b></p>
+
+		<p>“The teachers at Rainbow Valley work so hard to make learning exciting. My child comes home buzzing with new things she’s learned.”<br>
+		<b>- Mrs Turner</b></p>
+
+		<p>“We can really see how the values of respect, kindness and responsibility are embedded in the school. It’s a very positive environment.”<br>
+		<b>- A parent of a Year 3 Pupil</b></p>
+
+		<p>“We were nervous about moving schools, but the warm welcome at Rainbow Valley made the transition so easy. Our child felt at home from day 
+		one.”<br>
+		<b>- Anonymous Parent</b></p>
+
+		<p>“My child absolutely loves the forest school sessions and outdoor exploring. It’s such a brilliant part of the curriculum.”<br>
+		<b>- Mrs Johnson</b></p>
+
+		<p>“Rainbow Valley has exceeded our expectations in every way. The staff are dedicated, the pupils are friendly, and the school has a lovely 
+		atmosphere.”<br>
+		<b>- The Cooper Family</b></p>
+
+		<p>“Rainbow Valley has given our daughter the best possible start to her education. The teachers are caring, creative, and truly passionate 
+		about helping children thrive. We feel so grateful to be part of such a wonderful school community.”<br>
+		<b>- Evelyn and Jemima Phillips</b></p>
+	</div>
+	</div>
+</div>
+
+</body>
+</html>
